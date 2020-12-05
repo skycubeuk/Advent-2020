@@ -4,7 +4,7 @@ function get_id($sn, $rows)
 {
     $sn = str_split($sn);
     foreach ($sn as $a) {
-        $halved = array_chunk($rows, ceil(count($rows) / 2));
+        $halved = array_chunk($rows, count($rows) / 2);
         switch ($a) {
             case "F":
             case "L":
