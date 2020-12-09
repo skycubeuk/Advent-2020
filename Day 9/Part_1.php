@@ -2,6 +2,8 @@
 
 $in = file("input.txt");
 
+$ans = 0;
+
 foreach ($in as &$inv) {
     $inv = (int)trim($inv);
 }
@@ -33,8 +35,11 @@ while (true) {
     $v = get_preamble($in,25);
     $v = get_sums($v);
     if (!in_array($in[25],$v)) {
-        print $in[25];
-        die();
+        $ans = $in[25];
+        break;
     }
     array_shift($in);
 }
+
+
+print $ans;
